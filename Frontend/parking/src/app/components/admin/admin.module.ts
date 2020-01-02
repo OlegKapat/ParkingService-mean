@@ -1,6 +1,5 @@
 import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 import {AdminRoutingModule} from './admin-routing.module';
 import { ParkingComponent } from './parking/parking.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
@@ -16,7 +15,6 @@ import { AdminComponent } from './admin.component';
     AdminRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserModule
   ],
   exports:[ReactiveFormsModule,FormsModule,CommonModule],
   declarations: [ParkingComponent, OwnerparkingComponent, DatePipe, SiteuserComponent,LoaderComponent,AdminComponent ]

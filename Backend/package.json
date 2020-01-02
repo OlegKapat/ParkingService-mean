@@ -8,7 +8,8 @@
     "server": "nodemon index",
     "client-install": "npm install --prefix ../Frontend/parking",
     "frontend": "npm run start --prefix ../Frontend/parking",
-    "dev": "concurrently \"npm run server\"  \"npm run frontend\""
+    "dev": "concurrently \"npm run server\"  \"npm run frontend\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix Frontend/parking"
   },
   "keywords": [
     "angular&node"

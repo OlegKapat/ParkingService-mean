@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import { AdminModule } from './components/admin/admin.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './shared/classes/tokeninterceptor';
 import { OfferComponent } from './components/offer/offer.component';
@@ -30,8 +28,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    AdminModule
+    HttpClientModule
+
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,multi:true,useClass:TokenInterceptor}

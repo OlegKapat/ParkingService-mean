@@ -22,7 +22,7 @@ export class ApplicantsComponent implements OnInit,AfterViewInit,OnDestroy {
   start:MaterialDatepicker;
   end:MaterialDatepicker;
   applicantForm:FormGroup;
-  isValid=true;
+  isValid=false;
   dataRent:Rent[]=[];
   form={}
 

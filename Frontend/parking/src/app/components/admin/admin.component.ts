@@ -6,7 +6,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 import { Router } from '@angular/router';
 import { Manager } from './shared/interfaces/parking';
 import { Subject, Observable, iif } from 'rxjs';
-import { takeUntil, switchMap, mergeMap } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
 
 
 @Component({
@@ -17,12 +17,12 @@ import { takeUntil, switchMap, mergeMap } from 'rxjs/operators';
 })
 export class AdminComponent implements OnInit,AfterViewInit,OnDestroy {
 
-  @ViewChild('loginadmin',{static:true})   loginAdminRef:ElementRef
+  @ViewChild('loginadmin',{static:true}) loginAdminRef:ElementRef
   private unSubscribe=new Subject();
   managerForm:FormGroup;
   loginvalidator:boolean=false;
   loginModal:MaterialInstance;
-  $potok:Observable<any>
+
 
   constructor(private auth:AuthService,private router:Router) { }
 

@@ -32,4 +32,11 @@ app.use('/api/applicant',applicationRoutes);
 app.use('/api/rent',rentRouter);
 app.use('/api/contact',contactRouter)
 
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static('/Frontend/parking/dist/parking'))
+    app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'Frontend','parking','dist','parking','index.html'))
+    })
+}
+
 module.exports=app;

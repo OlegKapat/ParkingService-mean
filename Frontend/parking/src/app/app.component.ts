@@ -13,8 +13,7 @@ import { filter,map, mergeMap } from 'rxjs/operators';
 })
 export class   AppComponent implements OnInit {
   title = '';
-   constructor(private auth:AuthService, private titleService:Title,
-               private router: Router,private activatedRoute: ActivatedRoute){}
+   constructor(private auth:AuthService, private titleService:Title){}
 
   ngOnInit(){
     const potentialTokenForUser=localStorage.getItem('auth-token')

@@ -13,7 +13,8 @@
                   <label for="description">Примітка</label>
                 </div>
                 <div class="buttonrow">
-                <button type="submit" class="waves-effect waves-light btn-large"[disabled]="owner || !isValid">Здати в оренду</button>&nbsp;
+                <button type="submit" [disabled]="isValid" class="waves-effect waves-light btn-large"[disabled]="owner || !isValid">
+                  <i class="material-icons right">send</i>Здати в оренду</button>&nbsp;
                 <!-- <button type="submit" class="waves-effect waves-light btn-large " [disabled]="!owner">Зняти в аренду</button> -->
                 </div>
   </form>

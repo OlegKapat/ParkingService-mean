@@ -22,7 +22,7 @@ export interface Application{
   place:number,
   from:string,
   to:string,
-  description:string
+  description?:string
 }
 export interface Filter{
   start?:Date,

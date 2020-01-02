@@ -69,7 +69,7 @@ export  class MainPageComponent implements OnInit,AfterViewInit,OnDestroy,AfterC
         } else if (params['accessDinied']) {
         MaterialService.toast("Для початку роботи треба авторизуватись")
         } else if(params['sessionFailed']){
-          MaterialService.toast("Поточна сессія закінчилась")
+          MaterialService.toast("Поточна сесія закінчилась")
         } else if(params['login']){
           MaterialService.toast('Вітаємо вас')
         }
